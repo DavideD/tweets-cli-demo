@@ -27,8 +27,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- */
 public class ServiceTest {
 
 	private EntityManagerFactory entityManagerFactory;
@@ -57,34 +55,6 @@ public class ServiceTest {
 		FullTextQuery messagesBySmartMarketingGuy = service.messagesBy( "SmartMarketingGuy" );
 		Assert.assertEquals( 3, messagesBySmartMarketingGuy.getResultSize() );
 
-		FullTextQuery timeSortedTweets = service.allTweetsSortedByTime();
-		List resultList = timeSortedTweets.getResultList();
-		/*
-		Assert.assertEquals( 6, resultList.size() );
-		Assert.assertEquals( 2l, ((Tweet) resultList.get( 0 ) ).getTimestamp() );
-		Assert.assertEquals( 30l, ((Tweet) resultList.get( 1 ) ).getTimestamp() );
-		Assert.assertEquals( 50l, ((Tweet) resultList.get( 2 ) ).getTimestamp() );
-		Assert.assertEquals( 61000l, ((Tweet) resultList.get( 3 ) ).getTimestamp() );
-		Assert.assertEquals( 600000l, ((Tweet) resultList.get( 4 ) ).getTimestamp() );
-		Assert.assertEquals( 600001l, ((Tweet) resultList.get( 5 ) ).getTimestamp() );
-
-		Set<ScoredTerm> mostFrequentlyUsedTerms = service.mostFrequentlyUsedTerms( "message", 1 );
-		int i = 0;
-		for ( ScoredTerm scoredTerm : mostFrequentlyUsedTerms ) {
-			if ( scoredTerm.term.equals( "hibernate" ) ) {
-				Assert.assertEquals( scoredTerm, new ScoredTerm( "hibernate", 3 ) );
-				i++;
-			}
-			if ( scoredTerm.term.equals( "drools" ) ) {
-				Assert.assertEquals( scoredTerm, new ScoredTerm( "drools", 2 ) );
-				i++;
-			}
-			if ( scoredTerm.term.equals( "are" ) ) {
-				Assert.fail( "should not find 'are' as it's in the stopwords list" );
-			}
-		}
-		Assert.assertEquals( 2, i );
-		*/
 		entityManager.close();
 	}
 
