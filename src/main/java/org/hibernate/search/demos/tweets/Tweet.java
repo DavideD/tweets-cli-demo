@@ -29,7 +29,7 @@ import org.hibernate.search.annotations.TokenizerDef;
  * An entity to index tweets with Hibernate Search.
  *
  * It's using a custom analyzer using a set of stopwords,
- * and we filter out noisy terms or weird characters as well.
+ * and we filter out noisy terms or weird characters well.
  */
 @Indexed(index = "tweets")
 @Analyzer(definition = "english")
