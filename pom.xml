@@ -15,19 +15,19 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-search-orm</artifactId>
-            <version>5.0.1.Final</version>
+            <version>5.4.0.CR1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.3.8.Final</version>
+            <version>5.0.0.CR2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>4.3.8.Final</version>
+            <version>5.0.0.CR2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -45,13 +45,7 @@
         <dependency>
             <groupId>org.jboss.narayana.jta</groupId>
             <artifactId>narayana-jta</artifactId>
-            <version>5.0.4.Final</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.jboss.logmanager</groupId>
-                    <artifactId>jboss-logmanager</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>5.2.0.Final</version>
         </dependency>
     </dependencies>
 
