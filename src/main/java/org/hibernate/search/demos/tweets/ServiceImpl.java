@@ -16,8 +16,7 @@ import org.hibernate.search.jpa.FullTextQuery;
 import org.hibernate.search.query.dsl.QueryBuilder;
 
 /**
- * Example service, how the queries I'm aware of could be implemented.
- * All methods tested by org.hibernate.search.demos.tweets.ServiceTest
+ * Example service
  */
 public class ServiceImpl {
 

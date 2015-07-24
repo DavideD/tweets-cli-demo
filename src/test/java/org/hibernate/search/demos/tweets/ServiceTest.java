@@ -64,20 +64,20 @@ public class ServiceTest {
 
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		beginTransaction();
-		FullTextEntityManager fullTextEntityManager = Search.getFullTextEntityManager( entityManagerFactory.createEntityManager() );
+		FullTextEntityManager ftEm = Search.getFullTextEntityManager( entityManagerFactory.createEntityManager() );
 
 		// make sure the indexes are empty at start as we're using a filesystem based index:
-		fullTextEntityManager.purgeAll( Tweet.class );
-		fullTextEntityManager.flushToIndexes();
+		ftEm.purgeAll( Tweet.class );
+		ftEm.flushToIndexes();
 
 		// store some tweets
-		fullTextEntityManager.persist( new Tweet( "What's Drools? never heard of it", "SmartMarketingGuy", 50l ) );
-		fullTextEntityManager.persist( new Tweet( "We love Hibernate", "SmartMarketingGuy", 30l ) );
-		fullTextEntityManager.persist( new Tweet( "I wouldn't vote for Drools", "SmartMarketingGuy", 2l ) );
+		ftEm.persist( new Tweet( "What's Drools? never heard of it", "SmartMarketingGuy", 50l ) );
+		ftEm.persist( new Tweet( "We love Hibernate", "SmartMarketingGuy", 30l ) );
+		ftEm.persist( new Tweet( "I wouldn't vote for Drools", "SmartMarketingGuy", 2l ) );
 		//note the accent on "I", still needs to match search for "infinispan"
-		fullTextEntityManager.persist( new Tweet( "we are looking forward to Ìnfinispan", "AnotherMarketingGuy", 600000l ) );
-		fullTextEntityManager.persist( new Tweet( "Hibernate OGM", "AnotherMarketingGuy", 600001l ) );
-		fullTextEntityManager.persist( new Tweet( "What is Hibernate OGM?", "ME!", 61000l ) );
+		ftEm.persist( new Tweet( "we are looking forward to Ìnfinispan", "AnotherMarketingGuy", 600000l ) );
+		ftEm.persist( new Tweet( "Hibernate OGM", "AnotherMarketingGuy", 600001l ) );
+		ftEm.persist( new Tweet( "What is Hibernate OGM?", "ME!", 61000l ) );
 
 		commitTransaction();
 		entityManager.close();
