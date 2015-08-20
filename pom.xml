@@ -9,33 +9,37 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.hibernate-orm>5.0.0.CR2</version.hibernate-orm>
+        <version.hibernate-search>5.4.0.CR1</version.hibernate-search>
     </properties>
 
     <dependencies>
+        <!-- Runtime Dependencies -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-search-orm</artifactId>
-            <version>5.4.0.CR1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-search-infinispan</artifactId>
-            <version>5.4.0.CR1</version>
+            <version>${version.hibernate-search}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.0.0.CR2</version>
+            <version>${version.hibernate-orm}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.0.0.CR2</version>
+            <version>${version.hibernate-orm}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.narayana.jta</groupId>
+            <artifactId>narayana-jta</artifactId>
+            <version>5.2.2.Final</version>
+        </dependency>
+
+        <!-- Testing Dependencies -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -47,11 +51,6 @@
             <artifactId>h2</artifactId>
             <version>1.4.178</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.narayana.jta</groupId>
-            <artifactId>narayana-jta</artifactId>
-            <version>5.2.0.Final</version>
         </dependency>
     </dependencies>
 

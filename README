@@ -1,4 +1,7 @@
-A very simple command line based demo which showcases some advanced features of Hibernate Search
+A simple, minimalistic demo of Hibernate Search.
+
+In this case it uses standard JPA in a standalone Java SE runtime,
+transactions managed by JTA.
 
 Please get in touch for any explanation needed, on the mailing list, forums or irc:
 

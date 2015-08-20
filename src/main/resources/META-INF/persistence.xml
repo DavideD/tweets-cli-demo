@@ -5,10 +5,9 @@
     version="1.0">
 
     <persistence-unit name="test-tweets" transaction-type="JTA">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="create-drop" />
-            <property name="hibernate.search.default.directory_provider" value="infinispan" />
+            <property name="hibernate.search.default.directory_provider" value="ram" />
             <property name="hibernate.connection.driver_class" value="org.h2.Driver" />
             <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1" />
             <property name="hibernate.connection.username" value="sa" />
